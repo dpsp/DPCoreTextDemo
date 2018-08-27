@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		E778BAE0213246C900D97139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E778BADF213246C900D97139 /* Assets.xcassets */; };
 		E778BAE3213246C900D97139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E778BAE1213246C900D97139 /* LaunchScreen.storyboard */; };
 		E778BAE6213246C900D97139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E778BAE5213246C900D97139 /* main.m */; };
+		E778BAEE213246F100D97139 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E778BAED213246F100D97139 /* CoreText.framework */; };
+		E778BAF2213251DC00D97139 /* DPCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E778BAF1213251DC00D97139 /* DPCoreTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		E778BAE2213246C900D97139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E778BAE4213246C900D97139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E778BAE5213246C900D97139 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E778BAED213246F100D97139 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		E778BAF0213251DC00D97139 /* DPCoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPCoreTextView.h; sourceTree = "<group>"; };
+		E778BAF1213251DC00D97139 /* DPCoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPCoreTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E778BAEE213246F100D97139 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 			children = (
 				E778BAD5213246C600D97139 /* DPCoreTextDemo */,
 				E778BAD4213246C600D97139 /* Products */,
+				E778BAEC213246F100D97139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,8 +74,18 @@
 				E778BAE1213246C900D97139 /* LaunchScreen.storyboard */,
 				E778BAE4213246C900D97139 /* Info.plist */,
 				E778BAE5213246C900D97139 /* main.m */,
+				E778BAF0213251DC00D97139 /* DPCoreTextView.h */,
+				E778BAF1213251DC00D97139 /* DPCoreTextView.m */,
 			);
 			path = DPCoreTextDemo;
+			sourceTree = "<group>";
+		};
+		E778BAEC213246F100D97139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E778BAED213246F100D97139 /* CoreText.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,7 +123,7 @@
 				};
 			};
 			buildConfigurationList = E778BACE213246C600D97139 /* Build configuration list for PBXProject "DPCoreTextDemo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -141,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E778BAF2213251DC00D97139 /* DPCoreTextView.m in Sources */,
 				E778BADB213246C600D97139 /* ViewController.m in Sources */,
 				E778BAE6213246C900D97139 /* main.m in Sources */,
 				E778BAD8213246C600D97139 /* AppDelegate.m in Sources */,
@@ -286,10 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V687DH7N8W;
 				INFOPLIST_FILE = DPCoreTextDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nestia.DPCoreTextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,10 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V687DH7N8W;
 				INFOPLIST_FILE = DPCoreTextDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nestia.DPCoreTextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
